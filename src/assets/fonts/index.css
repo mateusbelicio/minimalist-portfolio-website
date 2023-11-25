@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Ibarra Real Nova';
+  src: url('/src/assets/fonts/ibarra-real-nova/IbarraRealNova-VariableFont_wght.ttf')
+    local('/src/assets/fonts/ibarra-real-nova/IbarraRealNova-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/src/assets/fonts/public-sans/PublicSans-VariableFont_wght.ttf')
+    local('/src/assets/fonts/public-sans/PublicSans-VariableFont_wght.ttf');
+}
