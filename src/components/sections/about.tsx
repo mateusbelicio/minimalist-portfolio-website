@@ -10,9 +10,9 @@ const AboutSection = () => {
           alt="Alex Spencer"
           width={311}
           height={346}
-          className="h-auto w-full"
+          className="h-auto w-full object-cover object-right sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:h-full"
         />
-        <div className="my-8 space-y-6 border-y border-border pb-[3.25rem] pt-8">
+        <div className="my-8 space-y-6 border-y border-border pb-[3.25rem] pt-8 sm:col-start-7 sm:col-end-13 sm:row-start-1 sm:my-0 sm:pt-[3.25rem]">
           <h2 className="heading-2">About me</h2>
           <p className="mt-1">
             I’m a junior front-end developer looking for a new role in an exciting company. I focus

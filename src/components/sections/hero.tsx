@@ -9,14 +9,16 @@ const HeroSection = () => {
           alt="image"
           height={271}
           width={311}
-          className="h-auto w-full"
+          className="h-auto w-full sm:row-start-1"
         />
-        <h1 className="heading-1 bg-background">
-          Hey, I’m Alex Spencer and I love building beautiful websites
-        </h1>
-        <button className="label-upper mt-2 bg-secondary py-4 text-center text-secondary-foreground">
-          About me
-        </button>
+        <div className="flex flex-col items-start gap-8 bg-background sm:col-start-1 sm:col-end-10 sm:row-start-1 sm:gap-12 sm:self-end sm:pt-14">
+          <h1 className="heading-1">
+            Hey, I’m Alex Spencer and I love building beautiful websites
+          </h1>
+          <button className="label-upper bg-secondary px-10 py-4 text-center text-secondary-foreground">
+            About me
+          </button>
+        </div>
       </div>
     </section>
   );
