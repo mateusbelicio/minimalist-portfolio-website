@@ -45,7 +45,7 @@
     @apply grid sm:grid-cols-12 sm:gap-x-2.5 lg:gap-x-[1.875rem] [&>*]:col-span-full;
   }
   .heading-1 {
-    @apply text-5xl font-bold -tracking-[0.009em] lg:text-[3.125rem];
+    @apply text-5xl font-bold -tracking-[0.009em] lg:text-[3.125rem] lg:leading-none;
   }
   .heading-2 {
     @apply text-5xl font-bold -tracking-[0.009em];

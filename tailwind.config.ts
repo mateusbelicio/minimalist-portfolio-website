@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Public Sans', ...fontFamily.sans],
-        serif: ['Ibarra Real Nova', ...fontFamily.serif],
+        sans: ['var(--ff-sans)', ...fontFamily.sans],
+        serif: ['var(--ff-serif)', ...fontFamily.serif],
       },
       fontSize: {
         '3xl': ['2rem', '2.625rem'],
