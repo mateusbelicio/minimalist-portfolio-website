@@ -1,43 +1,37 @@
 import Link from 'next/link';
 
+import { navLinks, socialLinks } from '@/config/navigation';
+
+import Icons from './icons';
+
 const Footer = () => {
   return (
     <footer className="bg-secondary py-14 text-secondary-foreground md:py-6">
-      <div className="main-container flex flex-col gap-10 text-center md:mr-auto md:flex-row md:gap-12">
-        <img src="/logo.svg" alt="Logo" className="mx-auto flex-shrink-0 md:mx-0" />
+      <div className="main-container flex flex-col gap-10 text-center md:flex-row md:gap-12">
+        <Link
+          href="/"
+          aria-label="Go to start"
+          className="mx-auto flex-shrink-0 text-secondary-foreground md:mx-0"
+        >
+          <Icons name="logo" />
+        </Link>
         <ul className="flex flex-col items-center gap-8 whitespace-nowrap md:flex-row md:gap-10">
-          <li>
-            <Link href="/" className="label-upper">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/portfolio" className="label-upper">
-              Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="label-upper">
-              Contact me
-            </Link>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link href={link.href} className="label-upper">
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <ul className="flex items-center justify-center gap-4 md:ml-auto md:flex-row md:gap-10">
-          <li>
-            <Link href="/" className="label-upper">
-              GIT
-            </Link>
-          </li>
-          <li>
-            <Link href="/portfolio" className="label-upper">
-              INS
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="label-upper">
-              LIN
-            </Link>
-          </li>
+        <ul className="flex items-center justify-center gap-4 md:ml-auto">
+          {socialLinks.map((link) => (
+            <li key={link.name}>
+              <Link href="/" className="label-upper" aria-label={`My profile on ${link.name}`}>
+                <Icons name={link.icon} />
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>
