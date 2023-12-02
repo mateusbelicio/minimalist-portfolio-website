@@ -1,26 +1,60 @@
+import { forwardRef } from 'react';
+import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'cva';
 import { twMerge } from 'tailwind-merge';
 
+import Icons, { type IconsName } from '../icons';
+
 const buttonVariants = cva(
-  'text-xs transition-colors px-9 py-4 tracking-[2px] label-upper text-center',
+  'group/btn label-upper select-none inline-flex h-12 items-center gap-9 px-[2.375rem] text-center transition-colors',
   {
     variants: {
       variant: {
-        primary: 'text-secondary-foreground bg-secondary hover:bg-primary',
+        primary:
+          'bg-secondary text-secondary-foreground [&:not(:disabled)]:hover:bg-primary disabled:bg-muted disabled:cursor-not-allowed',
         secondary:
-          'text-foreground bg-background hover:bg-foreground hover:text-background border border-foreground',
+          'border border-foreground bg-background text-foreground [&:not(:disabled)]:hover:bg-foreground [&:not(:disabled)]:hover:text-background disabled:cursor-not-allowed disabled:text-muted disabled:border-muted',
       },
-      defaultVariants: {
-        intent: 'primary',
-      },
+    },
+    defaultVariants: {
+      variant: 'primary',
     },
   }
 );
 
-type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & VariantProps<typeof buttonVariants>;
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
 
-const Button = ({ className, variant, children }: ButtonProps) => {
-  return <button className={twMerge(buttonVariants({ variant }), className)}>{children}</button>;
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, children, asChild, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button';
+
+    return (
+      <Comp className={twMerge(buttonVariants({ variant }), className)} {...props} ref={ref}>
+        {children}
+      </Comp>
+    );
+  }
+);
+
+type ButtonIconProps = React.HtmlHTMLAttributes<HTMLSpanElement> & {
+  name: IconsName;
+  asChild?: boolean;
 };
 
-export { Button, buttonVariants };
+const ButtonIcon = ({ className, asChild, name, ...props }: ButtonIconProps) => (
+  <span
+    className={twMerge(
+      `-ml-9 flex items-center self-stretch bg-black/10 px-4
+       group-hover/btn:text-inherit [&>svg]:w-4`,
+      className
+    )}
+    {...props}
+  >
+    <Icons className="group-hover/btn:animate-bounce" name={name} />
+  </span>
+);
+
+export { Button, ButtonIcon, buttonVariants };

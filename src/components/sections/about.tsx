@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Button } from '../ui/button';
+
 const AboutSection = () => {
   return (
     <section className="pt-24 lg:pt-[9.375rem]">
@@ -22,12 +24,9 @@ const AboutSection = () => {
             remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature
             whether that’s going for a walk, run or cycling. I’d love you to check out my work.
           </p>
-          <Link
-            href="/portfolio"
-            className="label-upper inline-block border border-secondary px-9 py-4"
-          >
-            Go to portfolio
-          </Link>
+          <Button variant="secondary">
+            <Link href="/portfolio">Go to portfolio</Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { Button } from '../ui/button';
+
 const CallToActionSection = () => {
   return (
     <section className="py-20 sm:py-24">
@@ -8,12 +10,9 @@ const CallToActionSection = () => {
           Interested in doing a project together?
         </h2>
         <span className="hidden h-px bg-border sm:block sm:flex-1"></span>
-        <Link
-          href="/contact"
-          className="label-upper inline-block whitespace-nowrap border border-secondary px-9 py-4"
-        >
-          Contact me
-        </Link>
+        <Button variant="secondary" asChild>
+          <Link href="/contact">Contact me</Link>
+        </Button>
       </div>
     </section>
   );

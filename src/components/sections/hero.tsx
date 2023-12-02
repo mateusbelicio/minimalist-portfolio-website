@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { Button, ButtonIcon, buttonVariants } from '../ui/button';
 
 const HeroSection = () => {
   return (
@@ -15,9 +18,12 @@ const HeroSection = () => {
           <h1 className="heading-1">
             Hey, I’m Alex Spencer and I love building beautiful websites
           </h1>
-          <button className="label-upper bg-secondary px-10 py-4 text-center text-secondary-foreground">
-            About me
-          </button>
+          <Button asChild variant="primary">
+            <Link href="#about">
+              <ButtonIcon name="downArrows" className="text-primary" />
+              About me
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
