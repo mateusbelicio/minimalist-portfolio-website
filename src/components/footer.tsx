@@ -11,14 +11,18 @@ const Footer = () => {
         <Link
           href="/"
           aria-label="Go to start"
-          className="mx-auto flex-shrink-0 text-secondary-foreground transition-colors hover:text-primary md:mx-0"
+          className="mx-auto flex-shrink-0 text-secondary-foreground outline-none outline-1 transition-colors hover:text-primary focus-visible:text-primary focus-visible:outline-primary md:mx-0"
         >
           <Icons name="logo" />
         </Link>
+
         <ul className="flex flex-col items-center gap-8 whitespace-nowrap md:flex-row md:gap-10">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <Link href={link.href} className="label-upper transition-colors hover:text-primary">
+              <Link
+                href={link.href}
+                className="label-upper transition-colors hover:text-primary focus-visible:border-b focus-visible:border-primary focus-visible:text-primary focus-visible:outline-none"
+              >
                 {link.name}
               </Link>
             </li>
@@ -29,7 +33,7 @@ const Footer = () => {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="label-upper transition-colors hover:text-primary"
+                className="label-upper outline-none outline-1 transition-colors hover:text-primary focus-visible:text-primary focus-visible:outline-primary"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`My profile on ${link.name}`}

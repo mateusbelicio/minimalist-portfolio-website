@@ -28,7 +28,7 @@ const AboutSection = () => {
             remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature
             whether that’s going for a walk, run or cycling. I’d love you to check out my work.
           </p>
-          <Button variant="secondary">
+          <Button variant="secondary" asChild>
             <Link href="/portfolio">Go to portfolio</Link>
           </Button>
         </div>

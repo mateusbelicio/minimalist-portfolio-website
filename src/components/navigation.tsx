@@ -1,36 +1,23 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
-import { twMerge } from 'tailwind-merge';
 
 import { navLinks } from '@/config/navigation';
 
-import Icons from './icons';
-
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav aria-roledescription="main navigation" className="relative">
-      <button
-        className="sm:hidden"
-        aria-label="Navigation Menu"
-        aria-haspopup="menu"
-        onClick={() => setIsOpen((currentState) => !currentState)}
-      >
-        <Icons name={isOpen ? 'close' : 'menu'} />
-      </button>
+    <nav aria-roledescription="main navigation" className="hidden sm:block">
       <ul
-        className={twMerge(
-          'invisible absolute right-0 top-full z-50 mt-6 flex origin-top-right select-none flex-col items-center gap-8 bg-foreground px-16 py-10 text-background transition-all sm:visible sm:static sm:flex-row sm:gap-[2.625rem] sm:bg-background sm:px-0 sm:py-0 sm:text-foreground',
-          isOpen && 'visible translate-x-0 translate-y-0 scale-100 opacity-100 ease-out',
-          !isOpen && 'invisible -translate-y-4 scale-90 opacity-0 ease-in'
-        )}
+        role="menubar"
+        aria-orientation="horizontal"
+        aria-label="Main navigation"
+        className="flex h-full select-none gap-[2.625rem] bg-background text-foreground"
       >
         {navLinks.map((link) => (
-          <li key={link.name}>
-            <Link className="label-upper whitespace-nowrap hover:text-primary" href={link.href}>
+          <li key={link.name} className="h-full">
+            <Link
+              role="menuitem"
+              className="label-upper flex h-full items-center whitespace-nowrap transition-colors hover:text-primary focus-visible:border-b focus-visible:border-primary focus-visible:text-primary focus-visible:outline-none"
+              href={link.href}
+            >
               {link.name}
             </Link>
           </li>

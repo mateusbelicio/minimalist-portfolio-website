@@ -11,9 +11,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-secondary text-secondary-foreground [&:not(:disabled)]:hover:bg-primary disabled:bg-muted disabled:cursor-not-allowed',
+          'bg-secondary text-secondary-foreground [&:not(:disabled)]:hover:bg-primary disabled:bg-muted disabled:cursor-not-allowed focus-visible:outline-1 focus-visible:bg-primary outline-none focus-visible:outline-primary',
         secondary:
-          'border border-foreground bg-background text-foreground [&:not(:disabled)]:hover:bg-foreground [&:not(:disabled)]:hover:text-background disabled:cursor-not-allowed disabled:text-muted disabled:border-muted',
+          'border border-foreground bg-background text-foreground [&:not(:disabled)]:hover:bg-foreground [&:not(:disabled)]:hover:text-background disabled:cursor-not-allowed disabled:text-muted disabled:border-muted focus-visible:bg-foreground focus-visible:text-background outline-none focus-visible:outline-1 focus-visible:outline-primary',
       },
     },
     defaultVariants: {
@@ -48,12 +48,15 @@ const ButtonIcon = ({ className, asChild, name, ...props }: ButtonIconProps) => 
   <span
     className={twMerge(
       `-ml-9 flex items-center self-stretch bg-black/10 px-4
-       group-hover/btn:text-inherit [&>svg]:w-4`,
+       group-hover/btn:text-inherit group-focus-visible/btn:text-inherit [&>svg]:w-4`,
       className
     )}
     {...props}
   >
-    <Icons className="group-hover/btn:animate-bounce" name={name} />
+    <Icons
+      className="group-hover/btn:animate-bounce group-focus-visible/btn:animate-bounce"
+      name={name}
+    />
   </span>
 );
 
