@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import profileImage from '~/public/images/homepage/desktop/image-homepage-profile.jpg';
 
 import { Button } from '../ui/button';
 
@@ -7,13 +8,16 @@ const AboutSection = () => {
   return (
     <section className="pt-24 lg:pt-[9.375rem]">
       <div className="main-container main-grid">
-        <Image
-          src="/images/homepage/mobile/image-homepage-profile.jpg"
-          alt="Alex Spencer"
-          width={311}
-          height={346}
-          className="h-auto w-full object-cover object-right sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:h-full lg:col-end-7"
-        />
+        <div className="relative h-[21.625rem] w-full sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:h-full lg:col-end-7">
+          <Image
+            src={profileImage}
+            alt="Alex Spencer"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 60vw, (max-width: 1200px) 50vw"
+            placeholder="blur"
+            className="object-cover object-center sm:object-right"
+          />
+        </div>
         <div className="my-8 space-y-6 border-y border-border pb-[3.25rem] pt-8 sm:col-start-7 sm:col-end-13 sm:row-start-1 sm:my-0 sm:pt-[3.25rem] lg:col-start-8 lg:col-end-12">
           <h2 className="heading-2">About me</h2>
           <p className="mt-1">

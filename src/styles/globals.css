@@ -20,7 +20,7 @@
 
 @layer base {
   html {
-    @apply min-h-full;
+    @apply min-h-full min-w-[20rem] scroll-smooth;
   }
 
   body {
