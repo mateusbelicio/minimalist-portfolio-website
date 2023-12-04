@@ -1,8 +1,14 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { navLinks } from '@/config/navigation';
 
 const Navigation = () => {
+  const path = usePathname();
+  const currentPath = `/${path.split('/').slice(1).at(0)}`;
+
   return (
     <nav aria-roledescription="main navigation" className="hidden sm:block">
       <ul
@@ -15,8 +21,9 @@ const Navigation = () => {
           <li key={link.name} className="h-full">
             <Link
               role="menuitem"
-              className="label-upper flex h-full items-center whitespace-nowrap transition-colors hover:text-primary focus-visible:border-b focus-visible:border-primary focus-visible:text-primary focus-visible:outline-none"
+              className="label-upper flex h-full items-center whitespace-nowrap transition-colors hover:text-primary focus-visible:border-b focus-visible:border-primary focus-visible:text-primary focus-visible:outline-none data-[active=true]:text-primary"
               href={link.href}
+              data-active={currentPath === link.href ? true : false}
             >
               {link.name}
             </Link>
