@@ -45,13 +45,13 @@
     @apply grid sm:grid-cols-12 sm:gap-x-2.5 lg:gap-x-[1.875rem] [&>*]:col-span-full;
   }
   .heading-1 {
-    @apply text-5xl font-bold -tracking-[0.009em] lg:text-[3.125rem] lg:leading-none;
+    @apply font-serif text-5xl font-bold -tracking-[0.009em] lg:text-[3.125rem] lg:leading-none;
   }
   .heading-2 {
-    @apply text-5xl font-bold -tracking-[0.009em];
+    @apply font-serif text-5xl font-bold -tracking-[0.009em];
   }
   .heading-3 {
-    @apply text-3xl font-normal -tracking-[0.009em];
+    @apply font-serif text-3xl font-normal -tracking-[0.009em];
   }
   .label {
     @apply text-[0.8125rem] font-bold leading-[1.875rem];

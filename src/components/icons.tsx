@@ -9,13 +9,13 @@ const IconsDefinitions = {
     </svg>
   ),
   arrowLeft: ({ ...props }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" {...props}>
-      <path fill="none" stroke="currentColor" d="M9 0L1 8l8 8" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" {...props}>
+      <path fill="none" stroke="currentColor" d="M9 1L1 9L9 17" />
     </svg>
   ),
   arrowRight: ({ ...props }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" {...props}>
-      <path fill="none" stroke="currentColor" d="M1 0l8 8-8 8" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" {...props}>
+      <path fill="none" stroke="currentColor" d="M1 1L9 9L1 17" />
     </svg>
   ),
   close: ({ ...props }) => (

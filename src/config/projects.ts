@@ -4,7 +4,10 @@ export type ProjectType = {
   tags: string[];
   link: string;
   coverImage: string;
-  staticImages: string[];
+  staticImages: {
+    hero: string;
+    previews: string[];
+  };
   background: string;
 };
 
@@ -15,11 +18,13 @@ export const bookmark: ProjectType = {
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS', 'JS'],
   link: '/portfolio/bookmark',
   coverImage: '/images/portfolio/desktop/image-portfolio-bookmark.jpg',
-  staticImages: [
-    '/images/detail/desktop/image-bookmark-hero.jpg',
-    '/images/detail/desktop/image-bookmark-preview-1.jpg',
-    '/images/detail/desktop/image-bookmark-preview-2.jpg',
-  ],
+  staticImages: {
+    hero: '/images/detail/desktop/image-bookmark-hero.jpg',
+    previews: [
+      '/images/detail/desktop/image-bookmark-preview-1.jpg',
+      '/images/detail/desktop/image-bookmark-preview-2.jpg',
+    ],
+  },
   background:
     'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
 };
@@ -31,11 +36,13 @@ export const fylo: ProjectType = {
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS'],
   link: '/portfolio/fylo',
   coverImage: '/images/portfolio/desktop/image-portfolio-fylo.jpg',
-  staticImages: [
-    '/images/detail/desktop/image-fylo-hero.jpg',
-    '/images/detail/desktop/image-fylo-preview-1.jpg',
-    '/images/detail/desktop/image-fylo-preview-2.jpg',
-  ],
+  staticImages: {
+    hero: '/images/detail/desktop/image-fylo-hero.jpg',
+    previews: [
+      '/images/detail/desktop/image-fylo-preview-1.jpg',
+      '/images/detail/desktop/image-fylo-preview-2.jpg',
+    ],
+  },
   background:
     'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
 };
@@ -47,11 +54,13 @@ export const insure: ProjectType = {
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS', 'JS'],
   link: '/portfolio/insure',
   coverImage: '/images/portfolio/desktop/image-portfolio-insure.jpg',
-  staticImages: [
-    '/images/detail/desktop/image-insure-hero.jpg',
-    '/images/detail/desktop/image-insure-preview-1.jpg',
-    '/images/detail/desktop/image-insure-preview-2.jpg',
-  ],
+  staticImages: {
+    hero: '/images/detail/desktop/image-insure-hero.jpg',
+    previews: [
+      '/images/detail/desktop/image-insure-preview-1.jpg',
+      '/images/detail/desktop/image-insure-preview-2.jpg',
+    ],
+  },
   background:
     'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
 };
@@ -63,11 +72,13 @@ export const manage: ProjectType = {
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS', 'JS'],
   link: '/portfolio/manage',
   coverImage: '/images/portfolio/desktop/image-portfolio-manage.jpg',
-  staticImages: [
-    '/images/detail/desktop/image-manage-hero.jpg',
-    '/images/detail/desktop/image-manage-preview-1.jpg',
-    '/images/detail/desktop/image-manage-preview-2.jpg',
-  ],
+  staticImages: {
+    hero: '/images/detail/desktop/image-manage-hero.jpg',
+    previews: [
+      '/images/detail/desktop/image-manage-preview-1.jpg',
+      '/images/detail/desktop/image-manage-preview-2.jpg',
+    ],
+  },
   background:
     'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
 };
