@@ -18,7 +18,7 @@ type DetailsProps = {
   };
 };
 
-const Details = ({ project, previus, next }: DetailsProps) => {
+const DetailsSection = ({ project, previus, next }: DetailsProps) => {
   return (
     <section className="pt-10 sm:pt-[5.875rem]">
       <div className="main-container main-grid lg:items-start">
@@ -92,4 +92,4 @@ const Details = ({ project, previus, next }: DetailsProps) => {
   );
 };
 
-export default Details;
+export default DetailsSection;

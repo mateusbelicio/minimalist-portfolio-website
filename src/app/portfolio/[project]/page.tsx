@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 
 import projects from '@/config/projects';
 import CallToActionSection from '@/components/sections/call-to-action';
-import Details from '@/components/sections/details';
+import DetailsSection from '@/components/sections/details';
 
 type TParams = { params: { project: string } };
 
@@ -25,7 +25,7 @@ function Project({ params }: TParams) {
 
   return (
     <main className="flex min-h-screen flex-col">
-      <Details
+      <DetailsSection
         project={selectedProject}
         previus={{ link: previus.link, title: previus.title }}
         next={{ link: next.link, title: next.title }}
