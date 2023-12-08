@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import { socialLinks } from '@/config/navigation';
 
+import ContactForm from '../contact-form';
 import Icons from '../icons';
-import { Button } from '../ui/button';
 
 const ContactSection = () => {
   return (
@@ -41,38 +41,7 @@ const ContactSection = () => {
 
         <div className="main-grid gap-y-6 sm:gap-y-8">
           <h2 className="heading-2 lg:col-span-4">Contact Me</h2>
-          <form className="flex flex-col gap-6 lg:col-span-7 lg:col-start-6">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="" className="label">
-                Name
-              </label>
-              <input
-                type="text"
-                className="bg-input px-4 py-2 text-sm leading-8 text-foreground placeholder:text-foreground/40"
-                placeholder="Jane Appleseed"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="" className="label">
-                Email Address
-              </label>
-              <input
-                type="text"
-                className="bg-input px-4 py-2 text-sm leading-8 text-foreground placeholder:text-foreground/40"
-                placeholder="email@example.com"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="" className="label">
-                Message
-              </label>
-              <textarea
-                className="resize-y bg-input px-4 py-2 text-sm leading-8 text-foreground placeholder:text-foreground/40"
-                placeholder="How can I help?"
-              />
-            </div>
-            <Button className="self-start">Send message</Button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </section>
