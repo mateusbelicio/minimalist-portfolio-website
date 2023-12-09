@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 
 import { isValidEmail } from '@/lib/utils';
@@ -14,14 +15,22 @@ type FormValues = {
   message: string;
 };
 
+const SUBMITTING_DELAY = 2000;
+
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const methods = useForm<FormValues>({
     defaultValues: { name: '', email: '', message: '' },
   });
 
   const onSubmit: SubmitHandler<FormValues> = () => {
-    alert('Your message has been sent successfully');
-    methods.reset();
+    setIsSubmitting(true);
+    const submitTimeout = setTimeout(() => {
+      alert('Your message has been sent successfully');
+      setIsSubmitting(false);
+      methods.reset();
+      clearTimeout(submitTimeout);
+    }, SUBMITTING_DELAY);
   };
 
   return (
@@ -34,12 +43,14 @@ const ContactForm = () => {
           name="name"
           label="Name"
           placeholder="Jane Appleseed"
+          disabled={isSubmitting}
           options={{ required: { value: true, message: 'This field is required' } }}
         />
         <Input
           name="email"
           label="Email Address"
           placeholder="email@example.com"
+          disabled={isSubmitting}
           options={{
             required: { value: true, message: 'This field is required' },
             validate: (value) => isValidEmail(value) || 'Please use a valid email address',
@@ -49,14 +60,15 @@ const ContactForm = () => {
           name="message"
           label="Message"
           placeholder="How can I help?"
+          disabled={isSubmitting}
           options={{
             required: { value: true, message: 'This field is required' },
             minLength: { value: 10, message: 'The message must have at least 10 characteres' },
           }}
         />
 
-        <Button type="submit" className="self-start">
-          Send message
+        <Button type="submit" className="self-start" disabled={isSubmitting}>
+          {!isSubmitting ? 'Send message' : 'Sending...'}
         </Button>
       </form>
     </FormProvider>

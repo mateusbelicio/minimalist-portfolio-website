@@ -31,7 +31,7 @@ const Input = ({ label, name, className, type, options, ...props }: InputProps) 
         aria-errormessage={formMessageId}
         aria-invalid={!!fieldState.error}
         className={twMerge(
-          'bg-input px-4 py-2 text-sm leading-8 text-foreground outline-none outline-1 outline-offset-0 placeholder:text-foreground/40 focus-visible:outline-primary aria-[invalid=true]:outline-destructive aria-[invalid=true]:focus-visible:outline-destructive',
+          'bg-input px-4 py-2 text-sm leading-8 text-foreground outline-none outline-1 outline-offset-0 placeholder:text-foreground/40 focus-visible:outline-primary disabled:cursor-not-allowed disabled:text-foreground/60 aria-[invalid=true]:outline-destructive aria-[invalid=true]:focus-visible:outline-destructive',
           className
         )}
         {...props}
