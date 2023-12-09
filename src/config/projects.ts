@@ -17,12 +17,12 @@ export const bookmark: ProjectType = {
     'This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.',
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS', 'JS'],
   link: '/portfolio/bookmark',
-  coverImage: '/images/portfolio/desktop/image-portfolio-bookmark.jpg',
+  coverImage: '/images/portfolio/image-portfolio-bookmark@2x.jpg',
   staticImages: {
-    hero: '/images/detail/desktop/image-bookmark-hero.jpg',
+    hero: '/images/detail/image-bookmark-hero@2x.jpg',
     previews: [
-      '/images/detail/desktop/image-bookmark-preview-1.jpg',
-      '/images/detail/desktop/image-bookmark-preview-2.jpg',
+      '/images/detail/image-bookmark-preview-1@2x.jpg',
+      '/images/detail/image-bookmark-preview-2@2x.jpg',
     ],
   },
   background:
@@ -35,12 +35,12 @@ export const fylo: ProjectType = {
     'This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.',
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS'],
   link: '/portfolio/fylo',
-  coverImage: '/images/portfolio/desktop/image-portfolio-fylo.jpg',
+  coverImage: '/images/portfolio/image-portfolio-fylo@2x.jpg',
   staticImages: {
-    hero: '/images/detail/desktop/image-fylo-hero.jpg',
+    hero: '/images/detail/image-fylo-hero@2x.jpg',
     previews: [
-      '/images/detail/desktop/image-fylo-preview-1.jpg',
-      '/images/detail/desktop/image-fylo-preview-2.jpg',
+      '/images/detail/image-fylo-preview-1@2x.jpg',
+      '/images/detail/image-fylo-preview-2@2x.jpg',
     ],
   },
   background:
@@ -53,12 +53,12 @@ export const insure: ProjectType = {
     'This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.',
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS', 'JS'],
   link: '/portfolio/insure',
-  coverImage: '/images/portfolio/desktop/image-portfolio-insure.jpg',
+  coverImage: '/images/portfolio/image-portfolio-insure@2x.jpg',
   staticImages: {
-    hero: '/images/detail/desktop/image-insure-hero.jpg',
+    hero: '/images/detail/image-insure-hero@2x.jpg',
     previews: [
-      '/images/detail/desktop/image-insure-preview-1.jpg',
-      '/images/detail/desktop/image-insure-preview-2.jpg',
+      '/images/detail/image-insure-preview-1@2x.jpg',
+      '/images/detail/image-insure-preview-2@2x.jpg',
     ],
   },
   background:
@@ -71,12 +71,12 @@ export const manage: ProjectType = {
     'This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.',
   tags: ['Interaction Design', 'Front End Development', 'HTML', 'CSS', 'JS'],
   link: '/portfolio/manage',
-  coverImage: '/images/portfolio/desktop/image-portfolio-manage.jpg',
+  coverImage: '/images/portfolio/image-portfolio-manage@2x.jpg',
   staticImages: {
-    hero: '/images/detail/desktop/image-manage-hero.jpg',
+    hero: '/images/detail/image-manage-hero@2x.jpg',
     previews: [
-      '/images/detail/desktop/image-manage-preview-1.jpg',
-      '/images/detail/desktop/image-manage-preview-2.jpg',
+      '/images/detail/image-manage-preview-1@2x.jpg',
+      '/images/detail/image-manage-preview-2@2x.jpg',
     ],
   },
   background:

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
-import heroImage from '~/public/images/homepage/desktop/image-homepage-hero.jpg';
+import heroImage from '~/public/images/homepage/image-homepage-hero@2x.jpg';
 
 import { Button, ButtonIcon } from '../ui/button';
 

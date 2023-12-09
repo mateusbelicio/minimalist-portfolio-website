@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import profileImage from '~/public/images/homepage/desktop/image-homepage-profile.jpg';
+import profileImage from '~/public/images/homepage/image-homepage-profile@2x.jpg';
 
 import { Button } from '../ui/button';
 

@@ -68,7 +68,7 @@ const DetailsSection = ({ project, previus, next }: DetailsProps) => {
         <div className="flex justify-center border-y border-border">
           <Link
             href={previus.link}
-            className="flex w-1/2 flex-grow flex-col items-start border-r border-border py-6 sm:flex-row sm:items-center sm:gap-8 sm:py-8"
+            className="flex w-1/2 flex-grow flex-col items-start border-r border-border py-6 transition-colors hover:bg-muted/25 focus-visible:bg-muted/25 focus-visible:outline-none focus-visible:outline-primary sm:flex-row sm:items-center sm:gap-8 sm:py-8"
           >
             <Icons name="arrowLeft" className="w-2" />
             <span>
@@ -78,7 +78,7 @@ const DetailsSection = ({ project, previus, next }: DetailsProps) => {
           </Link>
           <Link
             href={next.link}
-            className="flex w-1/2 flex-grow flex-col items-end py-6 sm:flex-row-reverse sm:items-center sm:gap-8 sm:py-8"
+            className="flex w-1/2 flex-grow flex-col items-end py-6 transition-colors hover:bg-muted/25 focus-visible:bg-muted/25 focus-visible:outline-none focus-visible:outline-primary sm:flex-row-reverse sm:items-center sm:gap-8 sm:py-8"
           >
             <Icons name="arrowRight" className="w-2" />
             <span>
