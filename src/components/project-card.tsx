@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { ProjectType } from '@/config/projects';
+import { shimmer, toBase64 } from '@/lib/utils';
 
 import { Button } from './ui/button';
 
@@ -18,6 +19,7 @@ const ProjectCard = async ({ project }: ProjectProps) => {
           src={project.coverImage}
           alt={`Thumbnail of ${project.title} project`}
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 50vw"
+          placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(540, 500))}`}
           fill
         />
       </div>

@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import heroImage from '~/public/images/homepage/image-homepage-hero@2x.jpg';
 
+import { shimmer, toBase64 } from '@/lib/utils';
+
 import { Button, ButtonIcon } from '../ui/button';
 
 const HeroSection = () => {
@@ -14,7 +16,7 @@ const HeroSection = () => {
             alt="image"
             fill
             sizes="100vw"
-            placeholder="blur"
+            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(1110, 600))}`}
             className="object-cover"
           />
         </div>

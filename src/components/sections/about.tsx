@@ -2,11 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import profileImage from '~/public/images/homepage/image-homepage-profile@2x.jpg';
 
+import { shimmer, toBase64 } from '@/lib/utils';
+
 import { Button } from '../ui/button';
 
 const AboutSection = () => {
   return (
-    <section className="pt-24 lg:pt-[9.375rem]">
+    <section id="about" className="pt-24 lg:pt-[9.375rem]">
       <div className="main-container main-grid">
         <div className="relative h-[21.625rem] w-full sm:col-start-1 sm:col-end-6 sm:row-start-1 sm:h-full lg:col-end-7">
           <Image
@@ -14,7 +16,7 @@ const AboutSection = () => {
             alt="Alex Spencer"
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 60vw, (max-width: 1200px) 50vw"
-            placeholder="blur"
+            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(540, 600))}`}
             className="object-cover object-center sm:object-right"
           />
         </div>

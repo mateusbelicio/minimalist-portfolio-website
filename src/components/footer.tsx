@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-foreground py-14 text-background md:py-6">
       <div className="main-container flex flex-col gap-10 text-center md:flex-row md:gap-12">
         <Link
-          href="/"
+          href="#"
           aria-label="Go to start"
           className="mx-auto flex-shrink-0 text-secondary-foreground outline-none outline-1 transition-colors hover:text-primary focus-visible:text-primary focus-visible:outline-primary md:mx-0"
         >

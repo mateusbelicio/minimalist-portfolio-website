@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { ProjectType } from '@/config/projects';
+import { shimmer, toBase64 } from '@/lib/utils';
 
 import Icons from '../icons';
 import { Button } from '../ui/button';
@@ -28,6 +29,7 @@ const DetailsSection = ({ project, previus, next }: DetailsProps) => {
             src={project.staticImages.hero}
             sizes="100vw"
             alt={`${project.title} project`}
+            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(1110, 500))}`}
             fill
           />
         </div>
@@ -59,6 +61,7 @@ const DetailsSection = ({ project, previus, next }: DetailsProps) => {
                   className="object-cover object-top"
                   alt={`Project preview ${index + 1}`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw"
+                  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(635, 400))}`}
                   fill
                 />
               </div>
