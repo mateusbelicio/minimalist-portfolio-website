@@ -38,11 +38,10 @@ const MobileNavigation = () => {
         )}
       >
         {navLinks.map((link) => (
-          <li key={link.name}>
+          <li role="menuitem" key={link.name}>
             <Link
               className="label-upper flex items-center justify-center whitespace-nowrap px-16 py-4 outline-none outline-1 hover:text-primary focus-visible:bg-black/10 focus-visible:text-primary focus-visible:-outline-offset-2 focus-visible:outline-primary"
               href={link.href}
-              role="menuitem"
             >
               {link.name}
             </Link>
