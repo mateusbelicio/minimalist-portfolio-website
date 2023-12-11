@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import heroImage from '~/public/images/homepage/image-homepage-hero@2x.jpg';
+import heroImage from '~/public/images/homepage/image-homepage-hero@2x.webp';
 
 import { shimmer, toBase64 } from '@/lib/utils';
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className="relative h-[16.9375rem] w-full sm:row-start-1 sm:h-[37.5rem]">
           <Image
             src={heroImage}
-            alt="image"
+            alt="Mockup of the Manage project"
             fill
             sizes="100vw"
             placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(1110, 600))}`}

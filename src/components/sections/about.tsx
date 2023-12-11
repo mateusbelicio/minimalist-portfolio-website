@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import profileImage from '~/public/images/homepage/image-homepage-profile@2x.jpg';
+import profileImage from '~/public/images/homepage/image-homepage-profile@2x.webp';
 
 import { shimmer, toBase64 } from '@/lib/utils';
 
