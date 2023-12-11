@@ -9,7 +9,7 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
 
 ![My Profile](https://img.shields.io/badge/Status-finished-green?style=flat)
 &dot;
-[![Status](https://img.shields.io/website?label=Website&down_color=inactive&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fmateusbelicio.github.io/minimalist-portfolio-website/)](https://mateusbelicio.github.io/minimalist-portfolio-website/)
+[![Status](https://img.shields.io/website?label=Website&down_color=inactive&down_message=offline&up_color=green&up_message=online&url=https://mateus-belicio-minimalist-portfolio-website.vercel.app/)](https://mateus-belicio-minimalist-portfolio-website.vercel.app/)
 &dot;
 [![My Profile](https://img.shields.io/badge/Profile-Mateus_Belicio-282C2E?style=flat&logo=frontendmentor)](https://www.frontendmentor.io/profile/mateusbelicio)
 
