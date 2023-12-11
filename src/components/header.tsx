@@ -11,6 +11,7 @@ const Header = () => {
         <Link
           href="/"
           className="flex-shrink-0 text-secondary outline-none outline-1 transition-colors hover:text-primary focus-visible:text-primary focus-visible:outline-primary"
+          aria-label="Go to home page"
         >
           <Icons name="logo" />
         </Link>
