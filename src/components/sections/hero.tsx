@@ -15,6 +15,7 @@ const HeroSection = () => {
             src={heroImage}
             alt="Mockup of the Manage project"
             fill
+            loading="eager"
             sizes="100vw"
             placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(1110, 600))}`}
             className="object-cover"

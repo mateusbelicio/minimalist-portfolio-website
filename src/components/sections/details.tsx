@@ -28,6 +28,7 @@ const DetailsSection = ({ project, previus, next }: DetailsProps) => {
             className="object-cover"
             src={project.staticImages.hero}
             sizes="100vw"
+            loading="eager"
             alt={`${project.title} project`}
             placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(1110, 500))}`}
             fill
